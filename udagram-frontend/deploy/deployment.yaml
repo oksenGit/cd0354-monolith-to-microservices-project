@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udagram-frontend
+  labels:
+    service: udagram-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: udagram-frontend
+  template:
+    metadata:
+      labels:
+        service: udagram-frontend
+        api: external
+    spec:
+      containers:
+      - name: udagram-frontend
+        image: oksendocker/udagram-frontend:v5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      restartPolicy: Always
