@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: oksendocker/udagram-frontend:v5
+        image: oksendocker/udagram-frontend:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 80

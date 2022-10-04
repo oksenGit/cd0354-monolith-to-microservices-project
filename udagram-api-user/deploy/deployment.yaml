@@ -15,7 +15,7 @@ spec:
         service: backend-user
     spec:
       containers:
-        - image: oksendocker/udagram-api-user:v2
+        - image: oksendocker/udagram-api-user:v1
           name: backend-user
           imagePullPolicy: Always
           resources:
